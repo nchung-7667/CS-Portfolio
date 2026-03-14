@@ -1,0 +1,11 @@
+# IntelliJ
+.idea/
+*.iml
+
+# Build outputs
+out/
+
+# OS files
+.DS_Store
+.termrc
+.gitconfig
