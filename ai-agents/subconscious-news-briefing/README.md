@@ -1,15 +1,15 @@
 # Subconscious AI News Briefing Agent
 
-An autonomous AI agent that generates weekly briefings on the latest developments in artificial intelligence.
+An autonomous multi-agent research system that generates weekly briefings on the latest developments in artificial intelligence.
 
-The agent performs multi-step research across web sources and synthesizes results into a structured report covering model releases, research breakthroughs, industry developments, and policy updates.
+Three specialized agents work in sequence — one scouts the web across multiple angles, one analyzes and connects the findings, and one writes a polished report.
 
 ## Features
 
-- Autonomous multi-source AI research
-- Structured briefing output
-- Multi-hop reasoning across web sources
-- Runs with a single agent call
+- Multi-agent pipeline with strict separation of concerns
+- Multi-hop web research across model releases, research, industry, and policy
+- Long-context reasoning across accumulated findings
+- Saves final report as a markdown file
 
 ## Tech Stack
 
@@ -21,30 +21,39 @@ The agent performs multi-step research across web sources and synthesizes result
 ## Installation
 
 Clone the repository:
-
+```bash
 git clone https://github.com/nchung-7667/CS-Portfolio.git
+```
 
 Navigate to the project:
-
+```bash
 cd CS-Portfolio/ai-agents/subconscious-news-briefing
+```
 
 Install dependencies:
-
+```bash
 pip install subconscious-sdk
+```
 
 Set your API key:
-
+```bash
 export SUBCONSCIOUS_API_KEY=your-api-key
+```
 
 ## Usage
+```bash
+python ai-news-agent.py
+```
 
-Run the agent:
-
-python briefing.py
-
-The agent will automatically research current AI developments and generate a structured briefing in the terminal.
+The agent will research current AI developments and save a structured briefing to `briefing_report.md`.
 
 ## Project Structure
+```
+ai-news-agent.py       — three-agent pipeline (scout, analyst, writer)
+briefing_report.md     — sample output report
+README.md              — this file
+```
 
-briefing.py  – agent configuration and execution  
-README.md    – project documentation
+## Sample Output
+
+See [briefing_report.md](briefing_report.md) for a full example of the agent's output.
